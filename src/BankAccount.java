@@ -7,6 +7,10 @@ public class BankAccount {
         this.balance = balance;
     }
 
+    public void deposit() throws InvalidAmountException {
+        deposit(0.0);
+    }
+
     public void deposit(double amount) throws InvalidAmountException{
 
         if (amount <= 0) {

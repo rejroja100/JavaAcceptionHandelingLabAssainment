@@ -8,12 +8,9 @@ public class Test {
             account.withdraw(200.0);
             account.withdraw(50.0);
             account.deposit(10.0);
-        } catch (InsufficientFundsException e) {
+        } catch (InsufficientFundsException | InvalidAmountException e) {
             System.out.println(e.getMessage());
-        } catch (InvalidAmountException e) {
-            System.out.println(e.getMessage());
-        }
-        finally {
+        } finally {
             System.out.println("The new balance is : " + account.GetBalance());
         }
     }
